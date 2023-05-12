@@ -1,0 +1,128 @@
+:root {
+  --indigo: #6e5fd2;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”,
+    “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
+  font-smooth: auto;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
+h1 {
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: 600;
+  background: #f45853; /* fallback  */
+  background: -webkit-linear-gradient(to right, #f45853, #6e5fd2);
+  background: linear-gradient(to right, #f45853, #6e5fd2);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+
+h2 {
+  width: fit-content;
+  font-weight: 600;
+
+  background: #f45853; /* fallback  */
+  background: -webkit-linear-gradient(to right, #f45853, #0e4397);
+  background: linear-gradient(to right, #f45853, #0e4397);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.inputs {
+  color: var(--indigo);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group > * {
+  transition: 0.3s ease;
+}
+
+input,
+label {
+  display: block;
+}
+
+input[type="text"] {
+  border: unset;
+  border-bottom: solid 2px var(--indigo);
+}
+
+.form-group:focus-within input {
+  border-color: #f45853;
+}
+
+.form-group:focus-within label {
+  color: #f45853;
+}
+
+button {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: white;
+  background: #a5297a; /* fallback  */
+  background: -webkit-linear-gradient(to right, #a5297a, #0e4397);
+  background: linear-gradient(to right, #a5297a, #0e4397);
+  border: unset;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 5px 10px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    align-self: center;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr;
+  }
+}

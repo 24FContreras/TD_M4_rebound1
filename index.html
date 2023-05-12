@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo 4, sesión 1: EasyPago</title>
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- FONT AWESOME KIT -->
+    <script
+      src="https://kit.fontawesome.com/1872a23027.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <h1><i class="fa-solid fa-wallet"></i> EASYPAGO</h1>
+
+      <form>
+        <div class="inputs">
+          <div class="form-group">
+            <label for="monto">¿Cuánto tienes que pagar?</label>
+            <input type="text" name="monto" id="monto" />
+          </div>
+          <div class="form-group">
+            <label for="interes">¿Cuánto interés(%) debes pagar?</label>
+            <input type="text" name="interes" id="interes" />
+          </div>
+          <div class="form-group">
+            <label for="cuotas">¿En cuántas cuotas puedes pagarlo?</label>
+            <input type="text" name="cuotas" id="cuotas" />
+          </div>
+        </div>
+        <button type="submit">¿Cómo lo pago?</button>
+      </form>
+
+      <h2 id="mensaje"></h2>
+    </main>
+    <!-- SCRIPTS -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
